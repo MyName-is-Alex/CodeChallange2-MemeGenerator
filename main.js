@@ -70,7 +70,7 @@ const createMeme = function (
   fontFamily,
   memeName
 ) {
-  //prepare canvas for image implementationlive
+  //prepare canvas for image implementation
   const context = canvas.getContext('2d');
   const width = image.width;
   const height = image.height;
@@ -81,6 +81,7 @@ const createMeme = function (
   canvas.height = height;
   context.drawImage(image, 0, 0);
 
+  //style output text
   context.strokeStyle = 'black';
   context.lineWidth = fontSize;
   context.fillStyle = fontColor;
@@ -98,7 +99,7 @@ const createMeme = function (
   context.strokeText(bottomText, width / 2, height - yOffset);
   context.fillText(bottomText, width / 2, height - yOffset);
 
-  //change download button HREF
+  //set the image to be downloaded when pressing download button
   downloadButton.href = canvas.toDataURL();
 
   //set downloaded file name
