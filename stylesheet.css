@@ -1,0 +1,225 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  width: 90vw;
+  height: 90vh;
+}
+
+/* -- style input section -- */
+.inputContainer {
+  width: 35%;
+  height: 90%;
+  padding: 40px;
+  box-shadow: 2px 2px 10px rgba(121, 121, 121, 0.596);
+  border-radius: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.inputElement {
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(121, 121, 121, 0.596);
+  border-radius: 10px;
+}
+.imageContainer {
+  background-color: #efefef;
+  position: relative;
+}
+/* -- create a line to separate the containers -- */
+.imageContainer::after {
+  content: '';
+  width: 80%;
+  background-color: transparent;
+  height: 1px;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.63);
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translate(-50%);
+}
+.container label {
+  display: block;
+  font-size: 15px;
+  margin: 10px 0 5px 0;
+  letter-spacing: 1px;
+}
+.container input {
+  display: block;
+  width: 100%;
+  letter-spacing: 1px;
+}
+.textContainer {
+  background-color: #ff5733;
+}
+.textContainer input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+  background-color: transparent;
+  color: white;
+}
+.textContainer label {
+  color: white;
+}
+.styleContainer {
+  background-color: #ff5733;
+}
+.styleContainer label {
+  color: white;
+}
+.styleContainer input {
+  color: white;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+  background-color: transparent;
+}
+.fontSizeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fontSizeContainer input {
+  width: 40px;
+  text-align: right;
+}
+.fontSizeContainer input:focus {
+  outline: none;
+}
+.fontColorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.fontColorContainer input {
+  width: 40px;
+}
+.fontFamilyContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.fontFamilyContainer select {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #ffff;
+  font-size: 15px;
+  margin: 10px 0 5px 0;
+  text-align: center;
+}
+.fontFamilyContainer option {
+  background-color: #ff5733;
+}
+
+/* -- style output section -- */
+.outputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 90%;
+  box-shadow: 2px 2px 10px rgba(121, 121, 121, 0.596);
+  border-radius: 10px;
+  overflow: auto;
+}
+.nameAndImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+.nameAndImg input {
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.575);
+  width: 50%;
+}
+#meme {
+  width: 100%;
+  margin: 20px 0;
+}
+#downloadButton {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  background-color: #efefef;
+  border-radius: 5px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  transition: all 0.2s ease-in-out;
+}
+#downloadButton:hover {
+  transform: scale(1.02);
+  background-color: #ff5733;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .inputContainer {
+    width: 80vw;
+    margin-bottom: 50px;
+  }
+  .outputContainer {
+    width: 80vw;
+    display: flex;
+    flex-direction: block;
+    height: auto;
+  }
+  .inputElement {
+    margin-bottom: 20px;
+  }
+  .inputContainer {
+    display: block;
+  }
+  .imageContainer::after {
+    display: none;
+  }
+  #downloadButton {
+    margin-bottom: 20px;
+  }
+  .nameAndImg {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-height: 740px) {
+  .inputElement {
+    margin-bottom: 20px;
+  }
+  .inputContainer {
+    display: block;
+  }
+  .imageContainer::after {
+    display: none;
+  }
+  #downloadButton {
+    margin-bottom: 20px;
+  }
+  .outputContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nameAndImg {
+    margin-top: 20px;
+  }
+}

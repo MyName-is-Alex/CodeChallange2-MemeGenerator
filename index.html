@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Code Challange 2 - Meme Generator</title>
+  </head>
+  <body>
+    <!-- meme creator container -->
+    <div class="container">
+      <div class="inputContainer">
+        <!-- image input -->
+        <div class="imageContainer inputElement">
+          <label for="inputImg">Select an Image</label>
+          <input type="file" id="inputImg" />
+        </div>
+        <!-- text imput -->
+        <div class="textContainer inputElement">
+          <label for="topText">Top Text:</label>
+          <input type="text" id="topTextInput" class="eventListener" />
+          <label for="bottomText">Bottom Text:</label>
+          <input type="text" id="bottomTextInput" class="eventListener" />
+        </div>
+        <!-- style input -->
+        <div class="styleContainer inputElement">
+          <div class="fontSizeContainer">
+            <label for="fontSize">Font Size:</label>
+            <input
+              value="5"
+              type="number"
+              min="1"
+              max="25"
+              id="fontSize"
+              class="eventListener"
+            />
+          </div>
+          <div class="fontColorContainer">
+            <label for="fontColor">Font Color:</label>
+            <input type="color" id="fontColor" class="eventListener" />
+          </div>
+          <div class="fontFamilyContainer">
+            <label for="fontFamily">Font Family:</label>
+            <select name="fontFamily" id="fontFamily" class="eventListener">
+              <option value="Arial">Arial</option>
+              <option value="Comic Sans">Comic Sans</option>
+              <option value="Pacifico">Pacifico</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="outputContainer">
+        <!-- output -->
+        <div class="nameAndImg">
+          <input
+            type="text"
+            value="My Meme"
+            id="memeName"
+            class="eventListener"
+          />
+          <canvas id="meme"></canvas>
+        </div>
+        <!--download button-->
+        <a href="#" id="downloadButton" download="My Meme">Download</a>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
